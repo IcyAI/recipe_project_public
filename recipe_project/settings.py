@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -80,12 +81,12 @@ WSGI_APPLICATION = 'recipe_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
@@ -97,6 +98,9 @@ DATABASES = {
 #     }
 # }
 
+DATABASES = {
+    'default': dj_database_url.config(default=f'sqlite:///{BASE_DIR / "db.sqlite3"}')
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -138,8 +142,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS=[
     BASE_DIR / 'static',
-    os.path.join(BASE_DIR, "recipes/static/recipes/css"),
-    os.path.join(BASE_DIR, "recipes/static/recipes/images"),
+    # os.path.join(BASE_DIR, "recipes/static/recipes/css"),
+    # os.path.join(BASE_DIR, "recipes/static/recipes/images"),
 ]
 # The absolute path to the directory where collectstatic will collect static files for deployment.
 STATIC_ROOT = BASE_DIR / 'staticfiles'
