@@ -1,0 +1,119 @@
+
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #333; /* Purple background */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header styling */
+header {
+    background-color: #402fd4;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center; /* Vertically centers items */
+    justify-content: space-between; /* Distributes space between items */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0; /* Remove default margin */
+}
+
+/* nav */
+nav {
+    display: flex;
+    gap: 15px; /* Space between nav links */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #6259e1;
+}
+
+
+/* Table styles */
+table {
+    width: 80%;
+    max-width: 600px;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 80px auto;
+    color:#402fd4;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    color:#402fd4;
+    font-weight: bold;
+}
+
+th {
+    background-color: #fff;
+    color: #402fd4;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+tr:hover {
+    background-color: #6259e1;
+}
+
+/* table image */
+img {
+    max-width: 120px; /* Adjusted for smaller images */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    max-height: 120px; /* Prevent images from being too tall */
+    margin: 0 auto;
+}
+
+/* table Link styles */
+.recipe-link {
+    text-decoration: none;
+    color: #402fd4;
+    font-weight: bold;
+}
+
+.recipe-link:hover {
+    color: #0e0e0f;
+    text-decoration: underline;
+}

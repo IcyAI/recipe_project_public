@@ -1,0 +1,153 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #402fd4; /* Light gray background */
+    text-align: center;
+}
+
+/* Header styling */
+header {
+    background-color: #402fd4;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: left; /* Vertically centers items */
+    justify-content: space-between; /* Distributes space between items */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* nav */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between nav links */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #6259e1;
+}
+
+/* Header styling */
+.search-header, .results-header {
+    color: #fff; /* Dark gray color */
+}
+
+/* Container for the search form */
+.search-form {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #fff; /* White background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling the form elements */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form select, form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 400px; /* Ensures the form fields don't stretch too wide */
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #402fd4; /* Blue background for button */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #6259e1; /* Darker blue on hover */
+}
+
+/* Styling for the table */
+table {
+    margin: 20px auto; /* Center the table horizontally */
+    border-collapse: collapse;
+    width: 90%; /* Set a max width for the table */
+    max-width: 1000px; /* Optional: restrict maximum width */
+    background-color: #fff; /* White background for the table */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd; /* Light gray border for table cells */
+}
+
+table th {
+    background-color: #f4f7f9; /* Light gray background for headers */
+}
+
+table td {
+    background-color: #fff; /* White background for table cells */
+}
+
+/* Styling for chart images */
+.chart-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 90%;
+    height: auto; /* Keeps aspect ratio */
+}
+
+h1 {
+    color: #fff;
+}
+
+/* Styling for error messages and content sections */
+h2, h3 {
+    color: #fff; /* Dark gray color for headings */
+    text-align: center;
+}
+
+h3 {
+    margin-top: 20px;
+    font-size: 1.2em; /* Slightly larger font size for sub-headings */
+}
+
+.error-message {
+    color: #e74c3c; /* Red color for error messages */
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    text-align: center;
+}
