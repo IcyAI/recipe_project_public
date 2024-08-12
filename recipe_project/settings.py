@@ -102,25 +102,6 @@ DATABASES = {
     )
 }
 
-# import dj_database_url
-# DATABASES = {
-#     'default': dj_database_url.config(default='postgres://localhost')
-# }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'recipe_app',
-#         'USER': 'your_user_name',
-#         'PASSWORD': 'your_password',
-#         'HOST': 'localhost',  # Use the PostgreSQL server address; 'localhost' for local setup
-#         'PORT': '5432',       # Default PostgreSQL port
-#     }
-# }
-
-# DATABASES = {
-#     'default': dj_database_url.config(default=f'sqlite:///{BASE_DIR / "db.sqlite3"}')
-# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -162,6 +143,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS=[
     BASE_DIR / 'static',
+    os.path.join(BASE_DIR, "media/recipes"),
     os.path.join(BASE_DIR, "recipes/static/recipes/css"),
     os.path.join(BASE_DIR, "recipes/static/recipes/images"),
 ]
