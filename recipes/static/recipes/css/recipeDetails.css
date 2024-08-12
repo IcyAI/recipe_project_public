@@ -1,0 +1,52 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9; /* Light background color */
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header styling */
+h2 {
+    color: #402fd4; /* Heading color */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Styling for the details */
+.details {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    color: #333;
+}
+
+/* Styling for labels */
+.details b {
+    color: #402fd4; /* Label color */
+}
+
+/* Image styling */
+img {
+    max-width: 500px; /* Adjusted for smaller images */
+    max-height: 500px; /* Prevent images from being too tall */
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 20px auto; /* Center the image and add spacing */
+}
+

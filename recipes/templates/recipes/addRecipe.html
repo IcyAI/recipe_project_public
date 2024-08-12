@@ -1,0 +1,81 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- load static, connect to css -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Recipes Add Recipe{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'recipes/css/addRecipe.css' %}">
+    </head>
+
+    <body>
+
+        <!-- title and navigation -->
+        <header>
+            <div class="header-content">
+                <h1>Add Recipe</h1>
+    
+                <nav>
+                    <a href ="{%url 'recipes:list' %}"> Recipe List </a>
+                    <a href="{% url 'recipes:sort' %}"> Find Recipes</a>
+                    <a href ="{%url 'recipes:addRecipe' %}"> Add Recipe </a>
+                    <a href ="{%url 'recipes:about' %}"> About Me </a>
+                    <a href="{% url 'logout' %}" class="logout-button">Logout</a>
+                </nav>
+                
+            </div>
+        </header>
+
+        {% block content %}
+
+            <!-- error handling -->
+
+            {% if messages %}
+                {% for message in messages %}
+                    <script>alert("{{ message }}");</script>
+                {% endfor %}
+            {% endif %}
+
+            <!-- form -->
+            <div class="add-form">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    <!-- recipe name -->
+                    <div class="form-group">
+                        <label for="id_name">Recipe Name:</label>
+
+                        <input type="text" name="name" id="id_name" required>
+                    </div>
+                    
+                    <!-- cooking time -->
+                    <div class="form-group">
+                        <label for="id_cooking_time">Cooking Time (minutes):</label>
+                        
+                        <input type="number" name="cookingTime" id="id_cooking_time" required>
+                    </div>
+                    
+                    <!-- ingredients -->
+                    <div class="form-group">
+                        <label for="id_ingredients">Ingredients (seperate ingredients by comma):</label>
+                        
+                        <textarea name="ingredients" id="id_ingredients" required></textarea>
+                    </div>
+                    
+                    <!-- picture -->
+                    <div class="form-group">
+                        <label for="id_picture">Picture:</label>
+                        
+                        <input type="file" name="pic" id="id_picture">
+                    </div>
+
+                    <!-- button -->
+                    <button type="submit">Add Recipe</button>
+                </form>      
+            </div>
+        {% endblock %}
+    </body>
+</html>

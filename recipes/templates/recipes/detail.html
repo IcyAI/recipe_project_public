@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- load static, connect to css -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'recipeDetails.css' %}">
+</head>
+
+<body>
+
+    <!-- details container -->
+    <div class="details">
+        <h2>Details: {{object.name}}</h2>
+
+        <!-- retrieved information -->
+        <p><b>Name:</b> {{object.name}}</p>
+        <p><b>Cooking Time:</b> {{object.cookingTime}}</p>
+        <p><b>Ingredients:</b> {{object.ingredients}}</p>
+        <p><b>Difficulty:</b> {{object.difficulty}}</p>
+
+        <img src="{{object.pic.url}}" alt="{{object.name}}" />
+    </div>
+
+</body>
+
+</html>

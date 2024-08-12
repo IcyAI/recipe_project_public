@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- load static, connect to css -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'recipeList.css' %}">
+</head>
+
+<body>
+
+    <header>
+            <!-- title and navigation -->
+        <div class="header-content">
+            <h1>Recipe List</h1>
+
+            <nav>
+                <a href ="{%url 'recipes:list' %}"> Recipe List </a>
+                <a href="{% url 'recipes:sort' %}"> Find Recipes</a>
+                <a href ="{%url 'recipes:addRecipe' %}"> Add Recipe </a>
+                <a href ="{%url 'recipes:about' %}"> About Me </a>
+                <a href="{% url 'logout' %}" class="logout-button">Logout</a>
+            </nav>
+            
+        </div>
+    </header>
+
+<table boarder="1" cellpadding="5" cellspacing = "5">  
+
+    {% comment%} start of table  {% endcomment%}
+
+        <tr>                                              {% comment%}  the <tr> tag adds a new row   {% endcomment%}
+            <td>Recipe Name</td>                        {% comment%} the <td> tag adds a column  {% endcomment%}       
+            <td>Picture</td>
+       </tr>  
+
+
+   {% for object in object_list %}                      {% comment%} go through each element of books’ list {% endcomment%}
+
+   <tr>
+        <td> 
+        <a class= "recipe-link" href ="{{object.get_absolute_url}}">         {% comment%} add links to book names  {% endcomment%}
+        {{object.name}}
+        </a> 
+        </td>
+       <td><img src="{{object.pic.url}}" width="150" height="200" /></td>
+   </tr>
+
+   {% endfor %}
+
+</table>
+
+</body>
+
+</html>
+

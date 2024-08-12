@@ -1,0 +1,135 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff; /* Purple background */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header styling */
+header {
+    background-color: #402fd4;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center; /* Vertically centers items */
+    justify-content: space-between; /* Distributes space between items */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0; /* Remove default margin */
+}
+
+/* nav style */
+nav {
+    display: flex;
+    gap: 15px; /* Space between nav links */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #6259e1;
+}
+
+/* Page title styling */
+h1 {
+    color: #fff; /* Darker text color for contrast */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form container styling */
+.add-form {
+    background-color: #fff; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px;
+    max-width: 600px; /* Limit the width of the form */
+    width: 100%;
+    margin-top: 130px;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555; /* Slightly lighter color for labels */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd; /* Light border color */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allows vertical resizing */
+    height: 150px; /* Default height for textarea */
+}
+
+/* Button styling */
+button {
+    background-color: #402fd4; /* Blue background for button */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%; /* Make the button full-width */
+}
+
+button:hover {
+    background-color: #6259e1; /* Darker blue on hover */
+}
+
+/* Alert styling (if needed) */
+.alert {
+    background-color: #ea3225; /* Red background for alerts */
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}

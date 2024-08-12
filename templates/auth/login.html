@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- title and navigation -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Login</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+
+
+<body>
+    <!-- containter to hold login form -->
+    <div class="login-container">
+        <h1>Login</h1>
+
+        <!-- error handeling -->
+        {% if error_message %}
+            <div class="error-message">
+                {{ error_message }}
+            </div>
+        {% endif %}
+        
+        <!-- form -->
+        <form action="" method="POST" class="login-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <!-- submit button -->
+            <button type="submit" class="login-button">Login</button>
+        </form>
+    </div>
+</body>
+</html>
