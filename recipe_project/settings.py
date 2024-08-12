@@ -139,8 +139,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS=[
     BASE_DIR / 'static',
-    os.path.join(BASE_DIR, "recipes/static/recipes/css"),
-    os.path.join(BASE_DIR, "recipes/static/recipes/images"),
+    # os.path.join(BASE_DIR, "recipes/static/recipes/css"),
+    # os.path.join(BASE_DIR, "recipes/static/recipes/images"),
 ]
 # The absolute path to the directory where collectstatic will collect static files for deployment.
 STATIC_ROOT = BASE_DIR / 'staticfiles'
